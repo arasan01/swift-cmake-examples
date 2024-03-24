@@ -1,0 +1,14 @@
+[
+{
+  "directory": "S:/src/apple-swift-cmake-examples/2_executable_library/build",
+  "command": "C:\\Users\\arasa\\AppData\\Local\\Programs\\Swift\\Toolchains\\0.0.0+Asserts\\usr\\bin\\swiftc.exe -j 12 -num-threads 12 -c -parse-as-library -static -emit-module -emit-module-path lib\\factorial.swiftmodule -module-name factorial -module-link-name factorial -Onone -g -incremental -output-file-map lib\\CMakeFiles\\factorial.dir\\Debug\\output-file-map.json S:\\src\\apple-swift-cmake-examples\\2_executable_library\\lib\\factorial.swift",
+  "file": "S:\\src\\apple-swift-cmake-examples\\2_executable_library\\lib\\factorial.swift",
+  "output": "lib\\CMakeFiles\\factorial.dir\\factorial.swift.obj"
+},
+{
+  "directory": "S:/src/apple-swift-cmake-examples/2_executable_library/build",
+  "command": "C:\\Users\\arasa\\AppData\\Local\\Programs\\Swift\\Toolchains\\0.0.0+Asserts\\usr\\bin\\swiftc.exe -j 12 -num-threads 12 -c -Onone -g -incremental -output-file-map src\\CMakeFiles\\factorials.dir\\Debug\\output-file-map.json -I S:\\src\\apple-swift-cmake-examples\\2_executable_library\\build\\lib S:\\src\\apple-swift-cmake-examples\\2_executable_library\\src\\main.swift",
+  "file": "S:\\src\\apple-swift-cmake-examples\\2_executable_library\\src\\main.swift",
+  "output": "src\\CMakeFiles\\factorials.dir\\main.swift.obj"
+}
+]

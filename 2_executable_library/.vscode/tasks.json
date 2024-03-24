@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"windows": {
+    "options": {
+      "shell": {
+        "executable": "cmd.exe",
+        "args": [
+          "/C",
+          "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvars64.bat\"",
+          "&&",
+          "chcp 65001>nul",
+          "&&"
+        ]
+      }
+    }
+  },
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Ninja build",
+			"command": "ninja",
+			"args": [
+				"-C",
+				"${workspaceFolder}/build",
+				"all"
+			],
+			"group": "build",
+			"problemMatcher": [],
+		},
+		{
+			"type": "shell",
+			"label": "Ninja clean",
+			"command": "ninja",
+			"args": [
+				"-C",
+				"${workspaceFolder}/build",
+				"clean"
+			],
+			"group": "none",
+			"problemMatcher": [],
+		}
+	]
+}

@@ -15,3 +15,7 @@ public func factorial(x: Int) -> Int {
     }
     return x * factorial(x: x - 1)
 }
+
+public func hello() {
+    print("Hello, world!")
+}
