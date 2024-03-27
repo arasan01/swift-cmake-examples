@@ -5,11 +5,14 @@
 #
 # See https://swift.org/LICENSE.txt for license information
 
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.29)
+cmake_policy(SET CMP0156 NEW)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+add_compile_options($<$<COMPILE_LANGUAGE:Swift>:-index-store-path> $<$<COMPILE_LANGUAGE:Swift>:${CMAKE_BINARY_DIR}/IndexStore/index>)
 
 # Project PingPong: Bouncing control flow between Swift and C++ like a ping pong
 #                   ball.
-project(PingPong LANGUAGES CXX Swift)
+project(PingPong LANGUAGES C CXX Swift)
 
 # Verify that we have a new enough compiler
 if("${CMAKE_Swift_COMPILER_VERSION}" VERSION_LESS 5.9)
@@ -24,8 +27,6 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
 
-# Set up swiftrt.o and runtime library search paths
-include(InitializeSwift)
 # cmake/modules/AddSwift.cmake provides the function for creating the Swift to
 # C++ bridging header
 include(AddSwift)

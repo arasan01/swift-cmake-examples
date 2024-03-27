@@ -10,9 +10,11 @@
 //===----------------------------------------------------------------------===//
 
 #include "fibonacci/fibonacci-swift.h"
+#include "fibonacci/fibonacci.h"
 #include <iostream>
 
 int main(int argc, char ** argv) {
+  std::cout << fibonacci_cpp(5) << std::endl;
   std::cout << SwiftFibonacci::fibonacciSwift(5) << std::endl;
   return 0;
 }

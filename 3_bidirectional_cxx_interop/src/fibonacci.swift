@@ -10,5 +10,6 @@
 //===----------------------------------------------------------------------===//
 
 import Fibonacci
+import SwiftFibonacci
 
 print(fibonacci_cpp(5))

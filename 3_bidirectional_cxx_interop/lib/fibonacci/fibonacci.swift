@@ -18,3 +18,7 @@ public func fibonacciSwift(_ x: CInt) -> CInt {
   }
   return fibonacci_cpp(x - 1) + fibonacci_cpp(x - 2)
 }
+
+public func sup() {
+  print("sup")
+}

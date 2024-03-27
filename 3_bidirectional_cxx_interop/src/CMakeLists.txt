@@ -7,6 +7,8 @@
 
 add_executable(fibonacci_swift fibonacci.swift)
 target_link_libraries(fibonacci_swift PRIVATE fibonacci)
+target_compile_options(fibonacci_swift PUBLIC
+  "$<$<COMPILE_LANGUAGE:Swift>:-cxx-interoperability-mode=default>")
 
 add_executable(fibonacci_cpp fibonacci.cpp)
 target_link_libraries(fibonacci_cpp PRIVATE fibonacci)

@@ -9,11 +9,12 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "fibonacci/fibonacci-swift.h"
 #include <iostream>
+#include "fibonacci/fibonacci-swift.h"
 
 int fibonacci_cpp(int x) {
   std::cout << "x [cpp]: " << x << std::endl;
+  SwiftFibonacci::sup();
   if (x <= 1) return 1;
   return SwiftFibonacci::fibonacciSwift(x - 1) + SwiftFibonacci::fibonacciSwift(x - 2);
 }
